@@ -1,4 +1,4 @@
-package com.nadarzy.ipldashboard.model;
+package com.nadarzy.ipl.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

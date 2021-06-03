@@ -1,5 +1,5 @@
-package com.nadarzy.ipldashboard.data;
-import com.nadarzy.ipldashboard.model.Match;
+package com.nadarzy.ipl.data;
+import com.nadarzy.ipl.model.Match;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.batch.item.ItemProcessor;

@@ -1,7 +1,7 @@
-package com.nadarzy.ipldashboard.data;
+package com.nadarzy.ipl.data;
 
 
-import com.nadarzy.ipldashboard.model.Team;
+import com.nadarzy.ipl.model.Team;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.batch.core.BatchStatus;
@@ -14,7 +14,6 @@ import org.springframework.stereotype.Component;
 import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 @Component

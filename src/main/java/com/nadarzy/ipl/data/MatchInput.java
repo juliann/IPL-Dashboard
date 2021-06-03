@@ -1,4 +1,4 @@
-package com.nadarzy.ipldashboard.data;
+package com.nadarzy.ipl.data;
 
 public class MatchInput {
     private String id;

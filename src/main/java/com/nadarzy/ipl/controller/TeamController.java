@@ -1,18 +1,15 @@
-package com.nadarzy.ipldashboard.controller;
+package com.nadarzy.ipl.controller;
 
-import com.nadarzy.ipldashboard.model.Match;
-import com.nadarzy.ipldashboard.model.Team;
-import com.nadarzy.ipldashboard.repository.MatchRepository;
-import com.nadarzy.ipldashboard.repository.TeamRepository;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
+import com.nadarzy.ipl.model.Team;
+import com.nadarzy.ipl.repository.MatchRepository;
+import com.nadarzy.ipl.repository.TeamRepository;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-
 @RestController
+@CrossOrigin
 public class TeamController {
 
     private TeamRepository teamRepository;

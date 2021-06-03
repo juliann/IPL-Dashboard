@@ -1,6 +1,6 @@
-package com.nadarzy.ipldashboard.repository;
+package com.nadarzy.ipl.repository;
 
-import com.nadarzy.ipldashboard.model.Team;
+import com.nadarzy.ipl.model.Team;
 import org.springframework.data.repository.CrudRepository;
 
 public interface TeamRepository extends CrudRepository<Team, Long> {

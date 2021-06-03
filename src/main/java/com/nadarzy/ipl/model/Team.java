@@ -1,4 +1,4 @@
-package com.nadarzy.ipldashboard.model;
+package com.nadarzy.ipl.model;
 
 import javax.persistence.*;
 import java.util.List;

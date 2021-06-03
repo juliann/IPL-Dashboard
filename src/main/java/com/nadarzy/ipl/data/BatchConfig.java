@@ -1,6 +1,6 @@
-package com.nadarzy.ipldashboard.data;
+package com.nadarzy.ipl.data;
 
-import com.nadarzy.ipldashboard.model.Match;
+import com.nadarzy.ipl.model.Match;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;

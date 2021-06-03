@@ -1,12 +1,10 @@
-package com.nadarzy.ipldashboard.repository;
+package com.nadarzy.ipl.repository;
 
-import com.nadarzy.ipldashboard.model.Match;
+import com.nadarzy.ipl.model.Match;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
 
-import javax.print.DocFlavor;
 import java.util.List;
 
 
