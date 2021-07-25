@@ -13,28 +13,26 @@ import java.util.List;
 @CrossOrigin
 public class TeamController {
 
-    private TeamRepository teamRepository;
-    private MatchRepository matchRepository;
+  private TeamRepository teamRepository;
+  private MatchRepository matchRepository;
 
-    public TeamController(TeamRepository teamRepository,MatchRepository matchRepository) {
-        this.teamRepository = teamRepository;
-        this.matchRepository = matchRepository;
-    }
+  public TeamController(TeamRepository teamRepository, MatchRepository matchRepository) {
+    this.teamRepository = teamRepository;
+    this.matchRepository = matchRepository;
+  }
 
-    @GetMapping("/team/{teamName}")
-    public Team getTeam(@PathVariable String teamName){
-        var team= this.teamRepository.findByTeamName(teamName);
+  @GetMapping("/team/{teamName}")
+  public Team getTeam(@PathVariable String teamName) {
+    var team = this.teamRepository.findByTeamName(teamName);
 
-        team.setMatches(this.matchRepository.findLatestMatchesByTeam(teamName, 4));
-        return team;
-    }
+    team.setMatches(this.matchRepository.findLatestMatchesByTeam(teamName, 4));
+    return team;
+  }
 
-    @GetMapping("/team/{teamName}/matches")
-    public List<Match> getMatchesForTeam(@PathVariable String teamName, @RequestParam int year){
-        LocalDate startDate = LocalDate.of(year, 1, 1);
-        LocalDate endDate = LocalDate.of(year + 1, 1, 1);
-        return  matchRepository.getByTeam1AndDateBetweenOrTeam2AndDateBetweenOrderByDateDesc(teamName,  startDate, endDate,teamName,  startDate, endDate);
-
-    }
-
+  @GetMapping("/team/{teamName}/matches")
+  public List<Match> getMatchesForTeam(@PathVariable String teamName, @RequestParam int year) {
+    LocalDate startDate = LocalDate.of(year, 1, 1);
+    LocalDate endDate = LocalDate.of(year + 1, 1, 1);
+    return matchRepository.getMatchesByTeamBetweenDates(teamName, startDate, endDate);
+  }
 }
