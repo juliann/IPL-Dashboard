@@ -67,25 +67,7 @@ public class JobCompletionNotificationListener extends JobExecutionListenerSuppo
                 if (t != null) t.setTotalWins((long) e[1]);
               });
 
-      jdbcTemplate
-          .query(
-              "SELECT team1, team2, date FROM match",
-              (rs, row) ->
-                  "Team 1"
-                      + rs.getString(1)
-                      + " "
-                      + "Team 2"
-                      + rs.getString(2)
-                      + " "
-                      + "date"
-                      + rs.getString(3))
-          .stream()
-          .limit(10)
-          .forEach(System.out::println);
-
       teamData.values().forEach(team -> entityManager.persist(team));
-      System.out.println();
-      teamData.values().forEach(System.out::println);
     }
   }
 }
